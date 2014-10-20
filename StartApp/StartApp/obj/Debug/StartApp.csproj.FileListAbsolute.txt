@@ -1,0 +1,6 @@
+C:\Users\Mykal\Documents\C#NET\CSharpNETPractice\StartApp\StartApp\bin\Debug\StartApp.exe.config
+C:\Users\Mykal\Documents\C#NET\CSharpNETPractice\StartApp\StartApp\bin\Debug\StartApp.exe
+C:\Users\Mykal\Documents\C#NET\CSharpNETPractice\StartApp\StartApp\bin\Debug\StartApp.pdb
+C:\Users\Mykal\Documents\C#NET\CSharpNETPractice\StartApp\StartApp\obj\Debug\StartApp.csprojResolveAssemblyReference.cache
+C:\Users\Mykal\Documents\C#NET\CSharpNETPractice\StartApp\StartApp\obj\Debug\StartApp.exe
+C:\Users\Mykal\Documents\C#NET\CSharpNETPractice\StartApp\StartApp\obj\Debug\StartApp.pdb
