@@ -10,6 +10,7 @@ namespace StartApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello C#!");
         }
     }
 }
