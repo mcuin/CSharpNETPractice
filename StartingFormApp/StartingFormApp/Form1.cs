@@ -16,5 +16,10 @@ namespace StartingFormApp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("My first message in C#!");
+        }
     }
 }
