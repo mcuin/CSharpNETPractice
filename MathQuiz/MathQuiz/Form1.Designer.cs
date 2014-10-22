@@ -67,7 +67,6 @@
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(464, 65);
             this.timeLabel.TabIndex = 0;
-            this.timeLabel.Text = "label1";
             // 
             // label2
             // 
