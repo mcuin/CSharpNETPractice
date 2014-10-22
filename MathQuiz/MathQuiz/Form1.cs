@@ -82,5 +82,16 @@ namespace MathQuiz
                 return false;
             }
         }
+
+        private void answer_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+
+            if (answerBox != null)
+            {
+                int answerLength = answerBox.Value.ToString().Length;
+                answerBox.Select(0, answerLength);
+            }
+        }
     }
 }

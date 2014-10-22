@@ -123,6 +123,7 @@
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(140, 35);
             this.sum.TabIndex = 2;
+            this.sum.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // minusLabelLeft
             // 
@@ -251,6 +252,7 @@
             this.subtract.Name = "subtract";
             this.subtract.Size = new System.Drawing.Size(140, 35);
             this.subtract.TabIndex = 3;
+            this.subtract.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // product
             // 
@@ -258,6 +260,7 @@
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(140, 35);
             this.product.TabIndex = 4;
+            this.product.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // quotent
             // 
@@ -265,6 +268,7 @@
             this.quotent.Name = "quotent";
             this.quotent.Size = new System.Drawing.Size(140, 35);
             this.quotent.TabIndex = 5;
+            this.quotent.Enter += new System.EventHandler(this.answer_Enter);
             // 
             // startButton
             // 
@@ -313,7 +317,7 @@
             this.Controls.Add(this.timeLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Math Quiz";
