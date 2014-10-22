@@ -15,7 +15,7 @@ namespace MathQuiz
 
         Random randomizer = new Random();
 
-        int addEnd1, addEnd2, timeLeft;
+        int addEnd1, addEnd2, timeLeft, sub1, sub2, mult1, mult2, div1, div2;
 
         public void startQuiz()
         {
@@ -26,6 +26,14 @@ namespace MathQuiz
             plusLabelRight.Text = addEnd2.ToString();
 
             sum.Value = 0;
+
+            sub1 = randomizer.Next(1, 101);
+            sub2 = randomizer.Next(1, sub1);
+
+            minusLabelLeft.Text = sub1.ToString();
+            minusLabelRight.Text = sub2.ToString();
+
+            subtract.Value = 0;
 
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
@@ -67,13 +75,14 @@ namespace MathQuiz
                 timeLabel.Text = "Times up!";
                 MessageBox.Show("You didn't finish in time, sorry!");
                 sum.Value = addEnd1 + addEnd2;
+                subtract.Value = sub1 - sub2;
                 startButton.Enabled = true;
             }
         }
 
         private bool CheckAnswer()
         {
-            if (addEnd1 + addEnd2 == sum.Value)
+            if ((addEnd1 + addEnd2 == sum.Value) && (sub1 - sub2 == sum.Value))
             {
                 return true;
             }
