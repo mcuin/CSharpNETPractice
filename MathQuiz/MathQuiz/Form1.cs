@@ -35,6 +35,16 @@ namespace MathQuiz
 
             subtract.Value = 0;
 
+            mult1 = randomizer.Next(2, 11);
+            mult2 = randomizer.Next(2, 11);
+
+            multLabelLeft.Text = mult1.ToString();
+            multLabelRight.Text = mult2.ToString();
+
+            product.Value = 0;
+
+            div1 = randomizer.Next(2, 11);
+
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
             timer1.Start();
