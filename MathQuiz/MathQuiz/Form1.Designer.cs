@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.timeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.plusLabelLeft = new System.Windows.Forms.Label();
             this.plusLabelRight = new System.Windows.Forms.Label();
@@ -51,21 +52,22 @@
             this.product = new System.Windows.Forms.NumericUpDown();
             this.quotent = new System.Windows.Forms.NumericUpDown();
             this.startButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subtract)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotent)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // timeLabel
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(620, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 65);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.timeLabel.Location = new System.Drawing.Point(620, 8);
+            this.timeLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(464, 65);
+            this.timeLabel.TabIndex = 0;
+            this.timeLabel.Text = "label1";
             // 
             // label2
             // 
@@ -277,6 +279,11 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -304,7 +311,7 @@
             this.Controls.Add(this.plusLabelRight);
             this.Controls.Add(this.plusLabelLeft);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.timeLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
@@ -322,7 +329,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label plusLabelLeft;
         private System.Windows.Forms.Label plusLabelRight;
@@ -345,6 +352,7 @@
         private System.Windows.Forms.NumericUpDown product;
         private System.Windows.Forms.NumericUpDown quotent;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
