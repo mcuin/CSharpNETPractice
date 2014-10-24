@@ -20,7 +20,7 @@ namespace MatchingGame
         };
 
         Label firstLabel = null;
-        Label secondLabe = null;
+        Label secondLabel = null;
 
         private void assignSquares()
         {
@@ -48,6 +48,11 @@ namespace MatchingGame
         {
             Label labelClicked = sender as Label;
 
+            if (timer1.Enabled == true)
+            {
+                return;
+            }
+
             if (labelClicked != null)
             {
                 if (labelClicked.ForeColor == Color.Black)
@@ -57,10 +62,24 @@ namespace MatchingGame
 
                 if (firstLabel == null)
                 {
-                    labelClicked.ForeColor = Color.Black;
                     firstLabel = labelClicked;
+                    labelClicked.ForeColor = Color.Black;
+                    return;
                 }
+
+                secondLabel = labelClicked;
+                secondLabel.ForeColor = Color.Black;
+
+                timer1.Start();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
+            firstLabel.ForeColor = firstLabel.BackColor;
+            secondLabel.ForeColor = secondLabel.BackColor;
         }
     }
 }
