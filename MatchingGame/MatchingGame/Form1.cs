@@ -40,5 +40,20 @@ namespace MatchingGame
 
             assignSquares();
         }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+            Label labelClicked = sender as Label;
+
+            if (labelClicked != null)
+            {
+                if (labelClicked.ForeColor == Color.Black)
+                {
+                    return;
+                }
+
+                labelClicked.ForeColor = Color.Black;
+            }
+        }
     }
 }
