@@ -19,6 +19,9 @@ namespace MatchingGame
             "!", "!", "N", "N", ",", ",", "k", "k", "b", "b", "v", "v", "w", "w", "z", "z"
         };
 
+        Label firstLabel = null;
+        Label secondLabe = null;
+
         private void assignSquares()
         {
             foreach (Control control in tableLayoutPanel1.Controls)
@@ -52,7 +55,11 @@ namespace MatchingGame
                     return;
                 }
 
-                labelClicked.ForeColor = Color.Black;
+                if (firstLabel == null)
+                {
+                    labelClicked.ForeColor = Color.Black;
+                    firstLabel = labelClicked;
+                }
             }
         }
     }
