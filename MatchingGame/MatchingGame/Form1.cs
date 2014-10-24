@@ -19,9 +19,26 @@ namespace MatchingGame
             "!", "!", "N", "N", ",", ",", "k", "k", "b", "b", "v", "v", "w", "w", "z", "z"
         };
 
+        private void assignSquares()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+                if (iconLabel != null)
+                {
+                    int randomNum = random.Next(icons.Count);
+                    iconLabel.Text = icons[randomNum];
+                    iconLabel.ForeColor = iconLabel.BackColor;
+                    icons.RemoveAt(randomNum);
+                }
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
+
+            assignSquares();
         }
     }
 }
