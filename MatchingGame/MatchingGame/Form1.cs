@@ -70,6 +70,8 @@ namespace MatchingGame
                 secondLabel = labelClicked;
                 secondLabel.ForeColor = Color.Black;
 
+                CheckWinner();
+
                 if (firstLabel.Text == secondLabel.Text)
                 {
                     firstLabel = null;
@@ -90,6 +92,25 @@ namespace MatchingGame
 
             firstLabel = null;
             secondLabel = null;
+        }
+
+        private void CheckWinner()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+
+                if (iconLabel != null)
+                {
+                    if (iconLabel.ForeColor == iconLabel.BackColor)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            MessageBox.Show("You matched all of the icons!", "Congrats");
+            Close();
         }
     }
 }
